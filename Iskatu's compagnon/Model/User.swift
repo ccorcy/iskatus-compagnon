@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+struct User: Codable {
+    var battleTag: String
+    var paragonLevel: Int
+    var paragonLevelSeason: Int
+    var paragonLevelSeasonHardcore: Int
+    var guildName: String
+    var heroes: [Hero]
+    var kills: ProfileKill
+    var progression: Progression
+}

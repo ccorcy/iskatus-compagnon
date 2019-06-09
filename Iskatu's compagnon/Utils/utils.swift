@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+func parseJSON(data: Data) throws -> User {
+    do {
+        let decoder = JSONDecoder()
+        let model = try decoder.decode(User.self, from: data)
+        return model
+    } catch let error {
+        print(error)
+        throw error
+    }
+}
