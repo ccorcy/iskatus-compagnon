@@ -17,6 +17,7 @@
 		6EE7CC2522AD69980054EB2B /* Kills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7CC2422AD69980054EB2B /* Kills.swift */; };
 		6EE7CC2722AD6BC60054EB2B /* ProfileKill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7CC2622AD6BC60054EB2B /* ProfileKill.swift */; };
 		6EE7CC2922AD6C450054EB2B /* Progression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7CC2822AD6C450054EB2B /* Progression.swift */; };
+		6EE7CC2D22AD967C0054EB2B /* ExocetLight-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EE7CC2C22AD967C0054EB2B /* ExocetLight-Medium.ttf */; };
 		6EF35CC522AC2CCC001AC065 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF35CC422AC2CCC001AC065 /* utils.swift */; };
 		6EF35CC822AC2D00001AC065 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF35CC722AC2D00001AC065 /* User.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		6EE7CC2422AD69980054EB2B /* Kills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kills.swift; sourceTree = "<group>"; };
 		6EE7CC2622AD6BC60054EB2B /* ProfileKill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileKill.swift; sourceTree = "<group>"; };
 		6EE7CC2822AD6C450054EB2B /* Progression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progression.swift; sourceTree = "<group>"; };
+		6EE7CC2C22AD967C0054EB2B /* ExocetLight-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ExocetLight-Medium.ttf"; sourceTree = "<group>"; };
 		6EF35CC422AC2CCC001AC065 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 		6EF35CC722AC2D00001AC065 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 		6EBCEDBA22A054DC001C86C3 /* Iskatu's compagnon */ = {
 			isa = PBXGroup;
 			children = (
+				6EE7CC2E22AD96980054EB2B /* fonts */,
 				6EF35CC622AC2CF3001AC065 /* Model */,
 				6EF35CC322AC2CAE001AC065 /* Utils */,
 				6EBCEDBB22A054DC001C86C3 /* AppDelegate.swift */,
@@ -79,6 +82,14 @@
 				6EBCEDC922A054DD001C86C3 /* Info.plist */,
 			);
 			path = "Iskatu's compagnon";
+			sourceTree = "<group>";
+		};
+		6EE7CC2E22AD96980054EB2B /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6EE7CC2C22AD967C0054EB2B /* ExocetLight-Medium.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		6EF35CC322AC2CAE001AC065 /* Utils */ = {
@@ -162,6 +173,7 @@
 				6EBCEDC822A054DD001C86C3 /* LaunchScreen.storyboard in Resources */,
 				6EBCEDC522A054DD001C86C3 /* Assets.xcassets in Resources */,
 				6EBCEDC322A054DC001C86C3 /* Main.storyboard in Resources */,
+				6EE7CC2D22AD967C0054EB2B /* ExocetLight-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

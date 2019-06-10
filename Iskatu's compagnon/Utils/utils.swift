@@ -18,3 +18,22 @@ func parseJSON(data: Data) throws -> User {
         throw error
     }
 }
+
+func makeRequest(url: URL, method: String, callback: @escaping (User) -> ()) {
+    let request = NSMutableURLRequest(url: url)
+    let session = URLSession.shared
+    request.httpMethod = method
+    let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
+        if error != nil {
+            print(error?.localizedDescription ?? "Response Error")
+            return }
+        do {
+            let jsonData = try parseJSON(data: data!)
+            print(jsonData)
+            callback(jsonData)
+        } catch let error {
+            print(error)
+        }
+    }
+    task.resume()
+}

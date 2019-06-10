@@ -7,8 +7,14 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ExocetLight-Medium.ttf">
+            <string>ExocetLight</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Profil-->
         <scene sceneID="hNz-n2-bh7">
@@ -18,52 +24,149 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProfileName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W7V-hd-oTX">
-                                <rect key="frame" x="20" y="100" width="374" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="9TI-XN-3zs">
-                                <rect key="frame" x="190" y="431" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
-                            </activityIndicatorView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="tFS-JU-pEJ">
-                                <rect key="frame" x="20" y="148" width="374" height="36"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7lQ-lC-wnu">
+                                <rect key="frame" x="20" y="108" width="374" height="217.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niveau de paragon :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdc-T8-gYX">
-                                        <rect key="frame" x="0.0" y="0.0" width="173" height="36"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProfileName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="908-qQ-vmx">
+                                        <rect key="frame" x="0.0" y="0.0" width="178.5" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="ExocetLight" family="ExocetLight" pointSize="24"/>
+                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jiw-4d-DL1">
-                                        <rect key="frame" x="273" y="0.0" width="101" height="36"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                        <color key="textColor" red="0.36540468199999998" green="0.47311034429999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clan name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVe-2a-6IZ">
+                                        <rect key="frame" x="0.0" y="32.5" width="72.5" height="18"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                        <color key="textColor" red="1" green="0.62829635277221985" blue="0.24175701830789542" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="hFn-Z5-HHH">
+                                        <rect key="frame" x="0.0" y="58.5" width="369" height="159"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tFS-JU-pEJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="369" height="30.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niveau de paragon :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdc-T8-gYX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="184" height="30.5"/>
+                                                        <fontDescription key="fontDescription" name="ExocetLight" family="ExocetLight" pointSize="15"/>
+                                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jiw-4d-DL1">
+                                                        <rect key="frame" x="192" y="0.0" width="177" height="30.5"/>
+                                                        <fontDescription key="fontDescription" name="ExocetLight" family="ExocetLight" pointSize="30"/>
+                                                        <color key="textColor" red="0.36540468199999998" green="0.47311034429999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qWE-LD-rsS">
+                                                <rect key="frame" x="0.0" y="57.5" width="369" height="30.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Niveau de paragon saisonnier:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIk-Tk-P1m">
+                                                        <rect key="frame" x="0.0" y="0.0" width="179.5" height="30.5"/>
+                                                        <fontDescription key="fontDescription" name="ExocetLight" family="ExocetLight" pointSize="15"/>
+                                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qve-48-eOR">
+                                                        <rect key="frame" x="274.5" y="0.0" width="94.5" height="30.5"/>
+                                                        <fontDescription key="fontDescription" name="ExocetLight" family="ExocetLight" pointSize="30"/>
+                                                        <color key="textColor" red="0.2928001542" green="0.86147992230000003" blue="0.25807375230000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="dwY-ZZ-REs">
+                                                <rect key="frame" x="0.0" y="115" width="369" height="44"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="sbe-J5-1y0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="89.5" height="44"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monstre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7g-Kl-yLa">
+                                                                <rect key="frame" x="0.0" y="0.0" width="89.5" height="17.5"/>
+                                                                <fontDescription key="fontDescription" name="ExocetLight" family="ExocetLight" pointSize="17"/>
+                                                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOD-NU-YQh">
+                                                                <rect key="frame" x="18" y="26.5" width="54" height="17.5"/>
+                                                                <fontDescription key="fontDescription" name="ExocetLight" family="ExocetLight" pointSize="17"/>
+                                                                <color key="textColor" red="0.81243928108808294" green="0.10679063305907022" blue="0.092480771614391083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Cb8-lu-AWl">
+                                                        <rect key="frame" x="150" y="0.0" width="96" height="44"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Champion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbd-BZ-XZz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96" height="17.5"/>
+                                                                <fontDescription key="fontDescription" name="ExocetLight" family="ExocetLight" pointSize="17"/>
+                                                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUy-Ih-QsS">
+                                                                <rect key="frame" x="21" y="26.5" width="54" height="17.5"/>
+                                                                <fontDescription key="fontDescription" name="ExocetLight" family="ExocetLight" pointSize="17"/>
+                                                                <color key="textColor" red="0.81243928108808294" green="0.10679063305907022" blue="0.092480771614391083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="QZU-LY-wtf">
+                                                        <rect key="frame" x="306" y="0.0" width="63" height="44"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Élites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0D-BL-Zd1">
+                                                                <rect key="frame" x="0.0" y="0.0" width="63" height="17.5"/>
+                                                                <fontDescription key="fontDescription" name="ExocetLight" family="ExocetLight" pointSize="17"/>
+                                                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzT-xR-Jj3">
+                                                                <rect key="frame" x="4.5" y="26.5" width="54" height="17.5"/>
+                                                                <fontDescription key="fontDescription" name="ExocetLight" family="ExocetLight" pointSize="17"/>
+                                                                <color key="textColor" red="0.81243928108808294" green="0.10679063305907022" blue="0.092480771614391083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="9TI-XN-3zs">
+                                <rect key="frame" x="189" y="429" width="36" height="38"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="color" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="W7V-hd-oTX" firstAttribute="leading" secondItem="tFS-JU-pEJ" secondAttribute="leading" id="Uyg-xC-iAb"/>
-                            <constraint firstItem="tFS-JU-pEJ" firstAttribute="top" secondItem="W7V-hd-oTX" secondAttribute="bottom" constant="12" id="coe-Tm-aIQ"/>
-                            <constraint firstItem="tFS-JU-pEJ" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="jya-VD-kXG"/>
-                            <constraint firstItem="W7V-hd-oTX" firstAttribute="trailing" secondItem="tFS-JU-pEJ" secondAttribute="trailing" id="suy-sA-Xys"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="tFS-JU-pEJ" secondAttribute="trailing" constant="20" id="uNf-QC-f2r"/>
-                            <constraint firstItem="W7V-hd-oTX" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="12" id="vb8-jz-Doz"/>
+                            <constraint firstItem="9TI-XN-3zs" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="81k-sn-HEq"/>
+                            <constraint firstItem="9TI-XN-3zs" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="189" id="IKq-IP-gHY"/>
+                            <constraint firstItem="7lQ-lC-wnu" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="IXL-ON-pSp"/>
+                            <constraint firstAttribute="trailing" secondItem="7lQ-lC-wnu" secondAttribute="trailing" constant="20" id="Kab-Nx-ae6"/>
+                            <constraint firstItem="7lQ-lC-wnu" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="20" id="eQT-7J-540"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="9TI-XN-3zs" secondAttribute="bottom" constant="346" id="mWB-8p-LQ2"/>
+                            <constraint firstItem="9TI-XN-3zs" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="zkn-w7-ZYM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profil" largeTitleDisplayMode="always" id="vlZ-Vl-9Uc"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <connections>
+                        <outlet property="GuildName" destination="tVe-2a-6IZ" id="uyF-YU-J0b"/>
+                        <outlet property="KillChampion" destination="zUy-Ih-QsS" id="eKz-Wf-z5A"/>
+                        <outlet property="KillElite" destination="zzT-xR-Jj3" id="bye-pJ-EFZ"/>
+                        <outlet property="KillMonster" destination="nOD-NU-YQh" id="Bff-MV-pwt"/>
                         <outlet property="loader" destination="9TI-XN-3zs" id="6sD-sS-tnH"/>
                         <outlet property="paragonLvl" destination="Jiw-4d-DL1" id="L82-gC-UGb"/>
-                        <outlet property="profileName" destination="W7V-hd-oTX" id="jjN-7S-f9n"/>
+                        <outlet property="paragonLvlSeason" destination="qve-48-eOR" id="eiU-dd-3DX"/>
+                        <outlet property="profileName" destination="908-qQ-vmx" id="cLs-y4-YFH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -146,7 +249,8 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -166,9 +270,12 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BDR-RA-5lt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profil" image="first" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="14A-Ak-auy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="14A-Ak-auy">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="ExocetLight" family="ExocetLight" pointSize="17"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

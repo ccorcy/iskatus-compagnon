@@ -23,6 +23,12 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var profileName: UILabel!
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var paragonLvl: UILabel!
+    @IBOutlet weak var paragonLvlSeason: UILabel!
+    @IBOutlet weak var GuildName: UILabel!
+    @IBOutlet weak var KillMonster: UILabel!
+    @IBOutlet weak var KillChampion: UILabel!
+    @IBOutlet weak var KillElite: UILabel!
+    
     
     // MARK: Methods
     
@@ -33,25 +39,13 @@ class FirstViewController: UIViewController {
 
     func requestProfile() {
         // request node server to get profile data (avoid oauth2)
-        let request = NSMutableURLRequest(url: URL(string: "http://localhost:3000/profile?battleTag=Cobracharles-2507")!)
-        let session = URLSession.shared
-        request.httpMethod = "GET"
-        let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
-                if error != nil {
-                    print(error?.localizedDescription ?? "Response Error")
-                    return }
-            do {
-                let user = try parseJSON(data: data!)
-                print(user)
-                DispatchQueue.main.async {
-                    self.processData(data: user)
-                    self.loadingState = true
-                }
-            } catch let error {
-                print(error)
+        makeRequest(url: URL(string: "http://192.168.1.47:3000/profile?battleTag=Cobracharles-2507")!, method: "GET") {
+            profileData in
+            DispatchQueue.main.async {
+                self.processData(data: profileData)
+                self.loadingState = true
             }
         }
-        task.resume()
     }
     
     func showProfileInfos(data: User) {
@@ -59,6 +53,12 @@ class FirstViewController: UIViewController {
         self.profileName.isHidden = false
         self.paragonLvl.text = String(data.paragonLevel)
         self.paragonLvl.isHidden = false
+        self.paragonLvlSeason.text = String(data.paragonLevelSeason)
+        self.paragonLvlSeason.isHidden = false
+        self.GuildName.text = data.guildName
+        self.KillMonster.text = String(data.kills.monsters)
+        self.KillChampion.text = String(data.kills.hardcoreMonsters)
+        self.KillElite.text = String(data.kills.elites)
     }
 }
 
